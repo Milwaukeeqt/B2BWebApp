@@ -1,0 +1,9 @@
+c:\users\jan-h\documents\visual studio 2017\Projects\B2BWebApp\B2BWebApp\bin\Debug\netcoreapp1.1\B2BWebApp.deps.json
+c:\users\jan-h\documents\visual studio 2017\Projects\B2BWebApp\B2BWebApp\bin\Debug\netcoreapp1.1\B2BWebApp.runtimeconfig.json
+c:\users\jan-h\documents\visual studio 2017\Projects\B2BWebApp\B2BWebApp\bin\Debug\netcoreapp1.1\B2BWebApp.runtimeconfig.dev.json
+c:\users\jan-h\documents\visual studio 2017\Projects\B2BWebApp\B2BWebApp\bin\Debug\netcoreapp1.1\B2BWebApp.dll
+c:\users\jan-h\documents\visual studio 2017\Projects\B2BWebApp\B2BWebApp\bin\Debug\netcoreapp1.1\B2BWebApp.pdb
+c:\users\jan-h\documents\visual studio 2017\Projects\B2BWebApp\B2BWebApp\obj\Debug\netcoreapp1.1\B2BWebApp.csprojResolveAssemblyReference.cache
+c:\users\jan-h\documents\visual studio 2017\Projects\B2BWebApp\B2BWebApp\obj\Debug\netcoreapp1.1\B2BWebApp.AssemblyInfo.cs
+c:\users\jan-h\documents\visual studio 2017\Projects\B2BWebApp\B2BWebApp\obj\Debug\netcoreapp1.1\B2BWebApp.dll
+c:\users\jan-h\documents\visual studio 2017\Projects\B2BWebApp\B2BWebApp\obj\Debug\netcoreapp1.1\B2BWebApp.pdb
