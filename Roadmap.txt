@@ -1,0 +1,16 @@
+Roadmap - B2B Webapp
+
+------------------------------------
+
+Login page
+
+Rest Service
+
+Control panel
+
+Shopping cart
+
+Allitem page
+
+Item page
+
