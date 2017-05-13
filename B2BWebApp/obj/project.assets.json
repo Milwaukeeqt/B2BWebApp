@@ -9808,15 +9808,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jan-h\\.nuget\\packages\\": {}
+    "C:\\Users\\Kim\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Git\\B2BWebApp\\B2BWebApp\\B2BWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Kim\\Documents\\B2BWebApp\\B2BWebApp\\B2BWebApp.csproj",
       "projectName": "B2BWebApp",
-      "projectPath": "F:\\Git\\B2BWebApp\\B2BWebApp\\B2BWebApp.csproj",
-      "outputPath": "F:\\Git\\B2BWebApp\\B2BWebApp\\obj\\",
+      "projectPath": "C:\\Users\\Kim\\Documents\\B2BWebApp\\B2BWebApp\\B2BWebApp.csproj",
+      "outputPath": "C:\\Users\\Kim\\Documents\\B2BWebApp\\B2BWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
