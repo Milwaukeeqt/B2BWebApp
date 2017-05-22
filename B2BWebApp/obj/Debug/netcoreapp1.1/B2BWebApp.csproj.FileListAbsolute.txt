@@ -12,7 +12,7 @@ C:\Users\Kim\Documents\B2BWebApp\B2BWebApp\bin\Debug\netcoreapp1.1\B2BWebApp.run
 C:\Users\Kim\Documents\B2BWebApp\B2BWebApp\bin\Debug\netcoreapp1.1\B2BWebApp.runtimeconfig.dev.json
 C:\Users\Kim\Documents\B2BWebApp\B2BWebApp\bin\Debug\netcoreapp1.1\B2BWebApp.dll
 C:\Users\Kim\Documents\B2BWebApp\B2BWebApp\bin\Debug\netcoreapp1.1\B2BWebApp.pdb
-C:\Users\Kim\Documents\B2BWebApp\B2BWebApp\obj\Debug\netcoreapp1.1\B2BWebApp.csprojResolveAssemblyReference.cache
 C:\Users\Kim\Documents\B2BWebApp\B2BWebApp\obj\Debug\netcoreapp1.1\B2BWebApp.AssemblyInfo.cs
 C:\Users\Kim\Documents\B2BWebApp\B2BWebApp\obj\Debug\netcoreapp1.1\B2BWebApp.dll
 C:\Users\Kim\Documents\B2BWebApp\B2BWebApp\obj\Debug\netcoreapp1.1\B2BWebApp.pdb
+C:\Users\Kim\Documents\B2BWebApp\B2BWebApp\obj\Debug\netcoreapp1.1\B2BWebApp.csprojResolveAssemblyReference.cache
