@@ -1,7 +1,23 @@
-﻿@model B2BWebApp.Models.Product.Product
+﻿@model System.Collections.Generic.List<B2BWebApp.Models.Product.Product>
+
 @{
     ViewData["Title"] = "Products";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div>@Model.title</div>
+<h2>Products</h2>
+
+@{
+    int counter = 0;
+}
+
+<table>
+    @foreach (var product in Model)
+    {
+        counter++;
+        <tr>
+            <td>@product.title</td>
+            <td>@counter.ToString()</td>
+        </tr>
+    }
+</table>

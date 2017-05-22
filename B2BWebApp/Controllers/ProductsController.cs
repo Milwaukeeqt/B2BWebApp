@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using B2BWebApp.Models.Product;
 using B2BWebApp.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,9 +16,9 @@ namespace B2BWebApp.Controllers
         {
             var service = new ProductService();
 
-            var products = await service.GetAllProductsAsync();
+            Products p = await service.GetAllProductsAsync();
 
-            return View(products);
+            return View("index", p.products);
         }
 
         // GET: Products/Details/id
