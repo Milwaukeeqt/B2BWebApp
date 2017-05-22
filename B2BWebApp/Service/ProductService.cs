@@ -8,11 +8,18 @@ namespace B2BWebApp.Service
 {
     public class ProductService : BaseService
     {
+        private readonly string _url;
+
+        public ProductService()
+        {
+            _url = base.GetUrl();
+        }
+
         public async Task<Products> GetAllProductsAsync()
         {
             string resource = "/admin/products.json";
 
-            string uri = GetUrl() + resource;
+            string uri = _url + resource;
 
             using (HttpClient httpClient = new HttpClient(GetAuthHandle()))
             {
@@ -24,7 +31,7 @@ namespace B2BWebApp.Service
         {
             string resource = $@"/admin/products.json?ids={id}";
 
-            string uri = GetUrl() + resource;
+            string uri = _url + resource;
 
             using (HttpClient httpClient = new HttpClient(GetAuthHandle()))
             {
@@ -36,7 +43,7 @@ namespace B2BWebApp.Service
         {
             string resource = $@"/admin/products.json?ids={string.Join(",", ids)}";
 
-            string uri = GetUrl() + resource;
+            string uri = _url + resource;
 
             using (HttpClient httpClient = new HttpClient(GetAuthHandle()))
             {
