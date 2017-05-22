@@ -4,13 +4,13 @@ Roadmap - B2B Webapp
 
 Login page
 
-Rest Service - Kim
+Rest Service - Kim (semi done)
 
 Control panel
 
 Shopping cart
 
-Allitem page
+Allitem page - Kim
 
 Item page
 
