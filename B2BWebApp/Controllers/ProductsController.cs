@@ -21,12 +21,6 @@ namespace B2BWebApp.Controllers
             return View("index", p.products);
         }
 
-        // GET: Products/Details/id
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
         // GET: Products/Create
         public ActionResult Create()
         {
