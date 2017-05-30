@@ -1,5 +1,5 @@
 ﻿@using System.Linq
-@model System.Collections.Generic.List<B2BWebApp.Models.Product.Product>
+@model List<B2BWebApp.Models.Product.Product>
 
 @{
     ViewData["Title"] = "Products";
@@ -25,8 +25,8 @@
                                 <img src="@product.image.src" alt="@product.tags" class="product-card__image" />
                             </div>
                             <div class="product-card__info">
-                                <div class="product-card__brand">@product.title</div>
-                                <div class="product-card__name">@product.options.FirstOrDefault().name</div>
+                                <div class="product-card__brand">@product.vendor</div>
+                                <div class="product-card__name">@product.title</div>
                                 <div class="product-card__price">@product.variants.FirstOrDefault().price EUR</div>
                             </div>
                             <div class="product-card__overlay">

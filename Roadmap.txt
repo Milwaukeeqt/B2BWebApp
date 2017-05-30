@@ -2,11 +2,11 @@ Roadmap - B2B Webapp
 
 ------------------------------------
 
-Login page
+Login page - Jan
 
 Rest Service - Kim (semi done)
 
-Control panel
+Control panel - Jan
 
 Shopping cart
 
