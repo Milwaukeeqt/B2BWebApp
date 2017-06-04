@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using B2BWebApp.Models.Customer;
-using B2BWebApp.Models.Product;
+using B2BWebApp.Models;
 using Newtonsoft.Json;
 
 namespace B2BWebApp.Service

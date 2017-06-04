@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using B2BWebApp.Models.Product;
+using B2BWebApp.Models;
 using Newtonsoft.Json;
 
 namespace B2BWebApp.Service
@@ -21,7 +21,7 @@ namespace B2BWebApp.Service
 
             string uri = _url + resource;
 
-            using (HttpClient httpClient = new HttpClient(GetAuthHandle()))
+            using (var httpClient = new HttpClient(GetAuthHandle()))
             {
                 return JsonConvert.DeserializeObject<Products>(await httpClient.GetStringAsync(uri));
             }
@@ -33,7 +33,7 @@ namespace B2BWebApp.Service
 
             string uri = _url + resource;
 
-            using (HttpClient httpClient = new HttpClient(GetAuthHandle()))
+            using (var httpClient = new HttpClient(GetAuthHandle()))
             {
                 return JsonConvert.DeserializeObject<Products>(await httpClient.GetStringAsync(uri));
             }
@@ -45,10 +45,22 @@ namespace B2BWebApp.Service
 
             string uri = _url + resource;
 
-            using (HttpClient httpClient = new HttpClient(GetAuthHandle()))
+            using (var httpClient = new HttpClient(GetAuthHandle()))
             {
                 return JsonConvert.DeserializeObject<Products>(await httpClient.GetStringAsync(uri));
             }
         }
+
+        //public async Task<Products> AdjustVariantQuantity(int id, int amount)
+        //{
+        //    string resource = $@"/admin/variants/#{id}";
+
+        //    string uri = _url + resource;
+
+        //    using (var httpClient = new HttpClient(GetAuthHandle()))
+        //    {
+        //        return httpClient.PutAsync(uri);
+        //    }
+        //}
     }
 }
