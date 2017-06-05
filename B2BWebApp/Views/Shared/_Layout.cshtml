@@ -9,7 +9,7 @@
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
-        <link href="~/css/theme.scss.css" rel="stylesheet" />
+        @*<link href="~/css/theme.scss.css" rel="stylesheet" />*@
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -23,20 +23,12 @@
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">B2BWebApp</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
-                </ul>
-            </div>
+            <button type="button" class="btn btn-default navbar-btn">IRON REBEL</button>
+            <button type="button" class="btn btn-default navbar-btn">Granite</button>
+            <button type="button" class="btn btn-default navbar-btn">Download</button>
+            <button type="button" class="btn btn-default navbar-btn">Pressroom</button>
+            <button type="button" class="btn btn-default navbar-btn">History</button>
+            <button type="button" class="btn btn-danger navbar-btn">Cart</button>
         </div>
     </nav>
     <div class="container body-content">
@@ -63,7 +55,6 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
-
     @RenderSection("Scripts", required: false)
 </body>
 </html>

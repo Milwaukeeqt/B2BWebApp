@@ -51,7 +51,7 @@ namespace B2BWebApp.Service
             }
         }
 
-        //public async Task<Products> AdjustVariantQuantity(int id, int amount)
+        //public async Task<ProductVariant> AdjustVariantQuantity(int id, int amount)
         //{
         //    string resource = $@"/admin/variants/#{id}";
 
