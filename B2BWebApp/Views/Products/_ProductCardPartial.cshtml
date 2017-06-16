@@ -1,0 +1,36 @@
+@model B2BWebApp.Models.Product
+
+<div class="container product-card">
+    <div class="row title">
+        @Model.Title
+    </div>
+    <div class="row content">
+        <div class="col-md-6">
+            <img src="@Model.Image.Src" alt="@Model.Tags" class="image" />
+        </div>
+        <div class="col-md-6 variants" style="padding-left:0">
+            <table class="table table-xtra-condensed">
+                <thead>
+                    <tr>
+                        <th>Variant</th>
+                        <th>Order</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var variant in Model.Variants)
+                    {
+                        <tr>
+                            <td>@variant.Title</td>
+                            <td><input type="text" style="width:30px" /></td>
+                            <td>@variant.InventoryQuantity</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row action">
+        <button class="btn btn-success">Add to Cart</button>
+    </div>
+</div>

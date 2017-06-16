@@ -1,41 +1,18 @@
 ﻿@using System.Linq
-@model List<B2BWebApp.Models.Products>
+@model List<B2BWebApp.Models.Product>
 
 @{
     ViewData["Title"] = "Products";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Products</h2>
-<div class="template-collection"></div>
-<div class="page-container is-moved-by-drawer">
-    <main class="main-content">
-        <div class="page-width">
-            <header class="grid medium-up--grid--table section-header small--text-center">
-                <div class="grid__item medium-up--one-half section-header__item">
-                    <h1 class="section-header__title"></h1>
-                </div>
-            </header>
-            <div class="grid grid--no-gutters grid--uniform">
-                @foreach (var product in Model)
-            {
-                    <div class="grid__item small--one-half medium-up--one-fifth">
-                        <a href="@product.Handle" class="product-card">
-                            <div class="product-card__image-wrapper">
-                                <img src="@product.Image.Src" alt="@product.Tags" class="product-card__image" />
-                            </div>
-                            <div class="product-card__info">
-                                <div class="product-card__brand">@product.Vendor</div>
-                                <div class="product-card__name">@product.Title</div>
-                                <div class="product-card__price">@product.Variants.FirstOrDefault().Price EUR</div>
-                            </div>
-                            <div class="product-card__overlay">
-                                <span class="btn product-card__overlay-btn">View</span>
-                            </div>
-                        </a>
-                    </div>
-                }
-            </div>
-        </div>
-    </main>
-</div>
+
+<main class="main-content">
+    <div class="page-width">
+        @foreach (var product in Model)
+        {
+            @Html.Partial("_ProductCardPartial", product);
+        }
+    </div>
+</main>
+
