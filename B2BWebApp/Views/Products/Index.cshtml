@@ -8,6 +8,21 @@
 
 
 <main class="main-content">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <button class="btn btn-default navbar-btn">Male</button>
+            <button class="btn btn-default navbar-btn">Female</button>
+            <button class="btn btn-default navbar-btn">Recently Added</button>
+            <button class="btn btn-default navbar-btn">Accessories</button>
+            <button class="btn btn-default navbar-btn">Hats</button>
+            <button class="btn btn-default navbar-btn">Most Sold</button>
+        </div>
+    </nav>
+
+    <div id="custom-search-input">
+        <input type="text" class="search-query form-control" placeholder="Search" />
+    </div>
+
     <div class="page-width">
         @foreach (var product in Model)
         {

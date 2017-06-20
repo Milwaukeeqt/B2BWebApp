@@ -17,7 +17,7 @@ namespace B2BWebApp.Service
 
         public async Task<Products> GetAllProductsAsync()
         {
-            string resource = "/admin/products.json";
+            string resource = "/admin/products.json?limit=75";
 
             string uri = _url + resource;
 
