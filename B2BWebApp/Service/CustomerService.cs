@@ -8,7 +8,7 @@ namespace B2BWebApp.Service
 {
     public class CustomerService : BaseService
     {
-        public async Task<List<Customer>> GetAllCustomersAsync()
+        public async Task<List<Customer>> GetAllAsync()
         {
             string resource = "/admin/customers.json";
 
@@ -20,7 +20,7 @@ namespace B2BWebApp.Service
             }
         }
 
-        public async Task<Customer> GetCustomerByIdAsync(int id)
+        public async Task<Customer> GetByIdAsync(int id)
         {
             string resource = $@"/admin/customers.json?ids={id}";
 
@@ -32,7 +32,7 @@ namespace B2BWebApp.Service
             }
         }
 
-        public async Task<List<Customer>> GetCustomerByIdsAsync(List<int> ids)
+        public async Task<List<Customer>> GetByIdsAsync(List<int> ids)
         {
             string resource = $@"/admin/customers.json?ids={string.Join(",", ids)}";
 

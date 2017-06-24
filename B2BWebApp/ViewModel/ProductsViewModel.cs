@@ -5,5 +5,6 @@ namespace B2BWebApp.ViewModel
     public class ProductsViewModel
     {
         public Products Products { get; set; }
+        public int PageCount { get; set; }
     }
 }

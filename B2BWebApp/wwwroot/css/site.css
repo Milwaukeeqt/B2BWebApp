@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Wrapping element */
@@ -69,8 +70,8 @@ textarea {
         max-height: 255px;
     }
 
-    .product-card .action {
-    }
+    /*.product-card .action {
+    }*/
 
     .product-card .btn {
         float: right;
@@ -90,9 +91,8 @@ textarea {
     border-radius: 0;
 }
 
-#custom-search-input {
-    
-}
+/*#search-input {  
+}*/
 
     #custom-search-input .search-query {
         padding-right: 3px;
@@ -104,3 +104,9 @@ textarea {
         -moz-border-radius: 3px;
         border-radius: 3px;
     }
+
+#btn-loadMore {
+    font-weight: bolder;
+    padding-left: 5em;
+    padding-right: 5em;
+}

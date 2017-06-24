@@ -1,6 +1,8 @@
 using System.Threading.Tasks;
+using System;
 using B2BWebApp.Models;
 using B2BWebApp.Service;
+using B2BWebApp.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -13,9 +15,25 @@ namespace B2BWebApp.Controllers
         {
             var service = new ProductService();
 
-            Products response = await service.GetAllProductsAsync();
+            int productsPerPage = 15;
+            int productCount = await service.Count();
+            int pageCount = (int)Math.Ceiling((double)(productCount / productsPerPage));
 
-            return View("index", response.ProductList);
+            Products response = await service.GetLimitedListAsync(productsPerPage);
+
+            return View("index", new ProductsViewModel { Products = response, PageCount = pageCount });
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetNextPage(int currentPage)
+        {
+            var service = new ProductService();
+
+            currentPage++;
+
+            Products response = await service.GetPageAsync(15, currentPage);
+
+            return PartialView("_ProductPagePartial", response.ProductList);
         }
 
         // GET: Products
@@ -23,7 +41,7 @@ namespace B2BWebApp.Controllers
         {
             var service = new ProductService();
 
-            Products response = await service.GetAllProductsAsync();
+            Products response = await service.GetAllAsync();
 
             List<Product> filtered = response.ProductList.FindAll(p => p.Tags == type);
 

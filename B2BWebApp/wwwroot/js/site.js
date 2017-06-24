@@ -1,1 +1,16 @@
-﻿
+﻿$('#btn-loadMore').click(function () {
+    let that = $(this);
+    let currentPage = +($('#current-page').text());
+    that.find('i').attr('class', 'fa fa-spinner fa-pulse');
+    $.ajax({
+        url: $(this).data('request-url'),
+        type: "GET",
+        data: { currentPage },
+        success: function (data) {
+            that.find('i').attr('class', 'fa fa-chevron-down');
+            currentPage++;
+            $('#current-page').text(currentPage)
+            $('#collection').append(data);
+        }
+    })
+});
