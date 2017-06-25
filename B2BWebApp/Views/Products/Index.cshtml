@@ -28,7 +28,7 @@
         @Html.Partial("_ProductPagePartial", Model.Products.ProductList)
 
     </div>
-    <div style="text-align:center; margin-top: 2em;">
+    <div style="text-align:center; margin-top: 2em; margin-bottom:2em">
         <button class="btn btn-primary" id="btn-load-more" data-request-url="@Url.Action("GetNextPage", "Products")">
             Show more
             <i class="fa fa-chevron-down" aria-hidden="true"></i>
