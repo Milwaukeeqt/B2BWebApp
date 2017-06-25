@@ -23,21 +23,18 @@
         <input type="text" class="search-query form-control" placeholder="Search" />
     </div>
 
-    <div style="visibility:hidden">
-        Current page: <span id="current-page">1</span>
-        Max page: @Model.PageCount
-    </div>
-
     <div class="page-width" id="collection">
 
         @Html.Partial("_ProductPagePartial", Model.Products.ProductList)
 
     </div>
     <div style="text-align:center; margin-top: 2em;">
-        <button class="btn btn-primary" id="btn-loadMore" data-request-url="@Url.Action("GetNextPage", "Products")">
+        <button class="btn btn-primary" id="btn-load-more" data-request-url="@Url.Action("GetNextPage", "Products")">
             Show more
             <i class="fa fa-chevron-down" aria-hidden="true"></i>
         </button>
+        <span style="visibility:hidden" id="current-page" data-page-nr="1" />
+        <span style="visibility:hidden" id="max-page-count" data-page-nr="@Model.PageCount" />
     </div>
 </main>
 
