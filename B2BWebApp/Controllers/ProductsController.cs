@@ -10,7 +10,7 @@ namespace B2BWebApp.Controllers
 {
     public class ProductsController : Controller
     {
-        // GET: Products
+        [Route("/collection")]
         public async Task<IActionResult> Index()
         {
             var service = new ProductService();
@@ -21,10 +21,10 @@ namespace B2BWebApp.Controllers
 
             Products response = await service.GetLimitedListAsync(productsPerPage);
 
-            return View("index", new ProductsViewModel { Products = response, PageCount = pageCount });
+            return View("Index", new ProductsViewModel { Products = response, PageCount = pageCount });
         }
 
-        [HttpGet]
+        [HttpPost]
         public async Task<IActionResult> GetNextPage(int currentPage)
         {
             var service = new ProductService();
@@ -36,16 +36,15 @@ namespace B2BWebApp.Controllers
             return PartialView("_ProductPagePartial", response.ProductList);
         }
 
-        // GET: Products
         public async Task<IActionResult> GetByCategory(string type)
         {
             var service = new ProductService();
 
             Products response = await service.GetAllAsync();
 
-            List<Product> filtered = response.ProductList.FindAll(p => p.Tags == type);
+            List<Product> filtered = response.ProductList.FindAll(p => p.Tags.Equals(type));
 
-            return View("index", filtered);
+            return View("Index", filtered);
         }
     }
 }

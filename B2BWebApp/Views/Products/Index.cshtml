@@ -1,32 +1,43 @@
-﻿@using System.Linq
-@model B2BWebApp.ViewModel.ProductsViewModel
+﻿@model B2BWebApp.ViewModel.ProductsViewModel
 
 @{
-    ViewData["Title"] = "Products";
+    ViewData["Title"] = "Products |";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
 <main class="main-content">
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <button class="btn btn-default navbar-btn">Male</button>
-            <button class="btn btn-default navbar-btn">Female</button>
-            <button class="btn btn-default navbar-btn">Recently Added</button>
-            <button class="btn btn-default navbar-btn">Accessories</button>
-            <button class="btn btn-default navbar-btn">Hats</button>
-            <button class="btn btn-default navbar-btn">Most Sold</button>
-        </div>
-    </nav>
+    <div class="container">
 
-    <div id="search-input">
-        <input type="text" class="search-query form-control" placeholder="Search" />
+        <div class="raised text-center" id="filter-bar">
+            <button class="btn btn-default">Male</button>
+            <button class="btn btn-default">Female</button>
+            <button class="btn btn-default">Recently Added</button>
+            <button class="btn btn-default">Accessories</button>
+            <button class="btn btn-default">Hats</button>
+            <button class="btn btn-default">Most Sold</button>
+        </div>
+
+        <div class="raised" id="search-input">
+            <input type="text" class="search-query form-control" placeholder="Search" />
+        </div>
+
     </div>
 
-    <div class="page-width" id="collection">
+    <div class="container cart pull-right raised">
+        <div class="row cart-title">
+            Summary
+        </div>
+        <div class="row panel list-group">
+            @Html.Partial("_ShoppingCartPartial")
+        </div>
+        <div class="row cart-action">
+            <button class="btn btn-danger">CHECKOUT</button>
+        </div>
+    </div>
 
+    <div class="page-width container text-center" id="collection">
         @Html.Partial("_ProductPagePartial", Model.Products.ProductList)
-
     </div>
     <div style="text-align:center; margin-top: 2em; margin-bottom:2em">
         <button class="btn btn-primary" id="btn-load-more" data-request-url="@Url.Action("GetNextPage", "Products")">
@@ -36,5 +47,6 @@
         <span style="visibility:hidden" id="current-page" data-page-nr="1" />
         <span style="visibility:hidden" id="max-page-count" data-page-nr="@Model.PageCount" />
     </div>
+
 </main>
 

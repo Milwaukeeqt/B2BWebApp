@@ -1,14 +1,14 @@
 @model B2BWebApp.Models.Product
 
-<div class="container product-card">
-    <div class="row title">
+<div class="product-card raised">
+    <div class="text-center title">
         @Model.Title
     </div>
-    <div class="row content">
-        <div class="col-md-6">
-            <img src="@Model.Image.Src" alt="@Model.Tags" class="image" />
+    <div class="content">
+        <div class="image">
+            <img src="@Model.Image.Src" alt="@Model.Tags" />
         </div>
-        <div class="col-md-6 variants" style="padding-left:0">
+        <div class="variants">
             <table class="table table-xtra-condensed">
                 <thead>
                     <tr>
@@ -30,8 +30,9 @@
             </table>
         </div>
     </div>
-    <div class="row action">
-        <button class="btn btn-success">
+    <div class="action">
+        <span id="product-id" style="visibility:hidden;">@Model.Id</span>
+        <button class="btn btn-success pull-right" id="btn-add-to-cart">
             <i class="fa fa-cart-plus" aria-hidden="true"></i>
             Add to Cart
         </button>

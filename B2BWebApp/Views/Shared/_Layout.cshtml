@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IRON REBEL | Wholesale | @ViewData["Title"]</title>
+    <title>@ViewData["Title"] Iron Rebel</title>
 
     <environment names="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />       
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
-        <link rel="icon" href="@Url.Content("~/favicon.ico")" type="image/x-icon"/>
-        <link rel="shortcut icon" href="@Url.Content("~/favicon.ico")" type="image/x-icon"/>
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <link rel="icon" href="@Url.Content("~/favicon.ico")" type="image/x-icon" />
+        <link rel="shortcut icon" href="@Url.Content("~/favicon.ico")" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -25,25 +25,43 @@
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            @Html.ActionLink("IRON REBEL", "Index", "Products", null, new { @class = "btn btn-default navbar-btn" })
-            <button class="btn btn-default navbar-btn">Granite</button>
-            <button class="btn btn-default navbar-btn">Download</button>
-            <button class="btn btn-default navbar-btn">Pressroom</button>
-            <button class="btn btn-default navbar-btn">History</button>
-            <button class="btn btn-danger navbar-btn">Cart</button>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src="~/images/iron-rebel-logo.png" /></a>
+            </div>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("Index", "Products")">IRON REBEL</a></li>
+                    <li><a href="@Url.Action("Index", "Granite")">Granite</a></li>
+                    <li><a href="@Url.Action("Index", "Download")">Download</a></li>
+                    <li><a href="@Url.Action("Index", "Pressroom")">Pressroom</a></li>
+                    <li><a href="@Url.Action("Index", "History")">History</a></li>
+                    <li id="cart"><a href="@Url.Action("Index", "Cart")">Cart</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="navbar-btn"><button class="btn btn-primary">Sign In</button></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <div class="container body-content">
+    <div class="body-content">
         @RenderBody()
     </div>
 
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/lib/jquery-waypoints/waypoints.js"></script>
+        <script src="~/lib/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.js"></script>
+        <script src="~/lib/jquery-waypoints/shortcuts/infinite-scroll/waypoints-infinite.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment names="Staging,Production">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery"
                 crossorigin="anonymous"
